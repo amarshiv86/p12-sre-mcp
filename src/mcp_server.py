@@ -20,7 +20,7 @@ Claude Desktop config (~/.claude/claude_desktop_config.json):
 
 import json
 import sys
-from .tools import TOOLS, get_audit_log
+from .tools import TOOLS
 
 
 def send_response(response: dict):

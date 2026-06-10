@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 from src.tools import (
     get_slo_status, get_runbook, query_alerts,
     create_incident, get_incident_timeline,
-    summarize_incident, TOOLS, get_audit_log, AUDIT_LOG,
+    summarize_incident, get_audit_log,
 )
 from src.mcp_server import handle_request
 
