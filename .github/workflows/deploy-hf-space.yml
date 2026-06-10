@@ -26,7 +26,7 @@ jobs:
 
           api = HfApi(token=os.environ["HF_TOKEN"])
           api.create_repo(
-              repo_id="amarshiv86/p14-sre-mcp",
+              repo_id="amarshiv86/p12-sre-mcp",
               repo_type="space",
               space_sdk="gradio",
               exist_ok=True,
@@ -48,9 +48,9 @@ jobs:
 
           api.upload_folder(
               folder_path=tmp,
-              repo_id="amarshiv86/p14-sre-mcp",
+              repo_id="amarshiv86/p12-sre-mcp",
               repo_type="space",
           )
           shutil.rmtree(tmp)
-          print("Deployed: amarshiv86/p14-sre-mcp")
+          print("Deployed: amarshiv86/p12-sre-mcp")
           EOF

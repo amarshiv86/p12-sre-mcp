@@ -1,4 +1,4 @@
-# P14 · SRE Ops MCP Server
+# P12 · SRE Ops MCP Server
 
 Custom **MCP (Model Context Protocol) server** exposing SRE tools as LLM-callable actions.
 Capstone project of the [Staff SRE · AI Engineer Portfolio](https://github.com/amarshiv86).
@@ -8,8 +8,8 @@ Capstone project of the [Staff SRE · AI Engineer Portfolio](https://github.com/
 | What | Where |
 |------|-------|
 | MCP server code | This repo (`src/`) |
-| Interactive demo | [HF Space](https://huggingface.co/spaces/amarshiv86/p14-sre-mcp) |
-| Tool examples + audit log | [HF Dataset](https://huggingface.co/datasets/amarshiv86/p14-sre-mcp-dataset) |
+| Interactive demo | [HF Space](https://huggingface.co/spaces/amarshiv86/p12-sre-mcp) |
+| Tool examples + audit log | [HF Dataset](https://huggingface.co/datasets/amarshiv86/p12-sre-mcp-dataset) |
 
 ## Tools exposed
 
@@ -30,7 +30,7 @@ Capstone project of the [Staff SRE · AI Engineer Portfolio](https://github.com/
     "sre-ops": {
       "command": "python",
       "args": ["-m", "src.mcp_server"],
-      "cwd": "/path/to/p14-sre-mcp"
+      "cwd": "/path/to/p12-sre-mcp"
     }
   }
 }
@@ -49,8 +49,8 @@ Then ask Claude: _"What's burning right now?"_ — it calls `query_alerts` +
 ## Run locally
 
 ```bash
-git clone https://github.com/amarshiv86/p14-sre-mcp
-cd p14-sre-mcp
+git clone https://github.com/amarshiv86/p12-sre-mcp
+cd p12-sre-mcp
 pip install -r requirements.txt
 
 # Run tests
@@ -66,7 +66,7 @@ echo '{"jsonrpc":"2.0","id":1,"method":"tools/list","params":{}}' | python -m sr
 ## Project structure
 
 ```
-p14-sre-mcp/
+p12-sre-mcp/
 ├── src/
 │   ├── tools.py        # 6 SRE tools + audit logging + timed_tool decorator
 │   └── mcp_server.py   # JSON-RPC 2.0 stdio transport

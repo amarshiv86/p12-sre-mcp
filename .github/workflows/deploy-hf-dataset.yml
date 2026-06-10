@@ -25,15 +25,15 @@ jobs:
 
           api = HfApi(token=os.environ["HF_TOKEN"])
           api.create_repo(
-              repo_id="amarshiv86/p14-sre-mcp-dataset",
+              repo_id="amarshiv86/p12-sre-mcp-dataset",
               repo_type="dataset",
               exist_ok=True,
               private=False,
           )
           api.upload_folder(
               folder_path="data",
-              repo_id="amarshiv86/p14-sre-mcp-dataset",
+              repo_id="amarshiv86/p12-sre-mcp-dataset",
               repo_type="dataset",
           )
-          print("Deployed: amarshiv86/p14-sre-mcp-dataset")
+          print("Deployed: amarshiv86/p12-sre-mcp-dataset")
           EOF

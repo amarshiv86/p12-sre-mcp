@@ -1,5 +1,5 @@
 """
-P14 · SRE Ops MCP Server — Stdio Transport
+P12 · SRE Ops MCP Server — Stdio Transport
 Standard MCP server using stdio transport.
 Use this with Claude Desktop or any MCP client.
 
@@ -12,7 +12,7 @@ Claude Desktop config (~/.claude/claude_desktop_config.json):
     "sre-ops": {
       "command": "python",
       "args": ["-m", "src.mcp_server"],
-      "cwd": "/path/to/p14-sre-mcp"
+      "cwd": "/path/to/p12-sre-mcp"
     }
   }
 }

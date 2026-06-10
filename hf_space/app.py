@@ -157,10 +157,10 @@ def manual_tool_call(tool_name: str, args_json: str) -> str:
 
 
 # ── Gradio UI ──────────────────────────────────────────────────────────────────
-with gr.Blocks(title="P14 · SRE Ops MCP Server", theme=gr.themes.Soft()) as demo:
+with gr.Blocks(title="P12 · SRE Ops MCP Server", theme=gr.themes.Soft()) as demo:
 
     gr.Markdown("""
-    # ⬡ P14 · SRE Ops MCP Server
+    # ⬡ P12 · SRE Ops MCP Server
     **Staff SRE + AI Engineer Portfolio — Capstone Project**
 
     A custom **MCP (Model Context Protocol) server** that exposes SRE tools
@@ -251,7 +251,7 @@ with gr.Blocks(title="P14 · SRE Ops MCP Server", theme=gr.themes.Soft()) as dem
             "sre-ops": {
               "command": "python",
               "args": ["-m", "src.mcp_server"],
-              "cwd": "/path/to/p14-sre-mcp"
+              "cwd": "/path/to/p12-sre-mcp"
             }
           }
         }
@@ -270,7 +270,7 @@ with gr.Blocks(title="P14 · SRE Ops MCP Server", theme=gr.themes.Soft()) as dem
 
     gr.Markdown("""
     ---
-    [GitHub](https://github.com/amarshiv86/p14-sre-mcp) ·
+    [GitHub](https://github.com/amarshiv86/p12-sre-mcp) ·
     [Staff SRE Portfolio](https://github.com/amarshiv86)
     """)
 
