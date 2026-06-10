@@ -1,0 +1,46 @@
+[
+  {
+    "id": "abc12345",
+    "timestamp": "2026-06-10T03:00:00+00:00",
+    "tool": "query_alerts",
+    "args": {"severity": "all"},
+    "success": true,
+    "latency_ms": 2
+  },
+  {
+    "id": "def67890",
+    "timestamp": "2026-06-10T03:00:01+00:00",
+    "tool": "get_slo_status",
+    "args": {"service_name": "auth-service"},
+    "success": true,
+    "latency_ms": 1
+  },
+  {
+    "id": "ghi11223",
+    "timestamp": "2026-06-10T03:00:02+00:00",
+    "tool": "get_runbook",
+    "args": {"alert_name": "HighErrorRate"},
+    "success": true,
+    "latency_ms": 3
+  },
+  {
+    "id": "jkl44556",
+    "timestamp": "2026-06-10T03:00:05+00:00",
+    "tool": "create_incident",
+    "args": {
+      "title": "auth-service HighErrorRate — burn rate 4.6x",
+      "severity": "critical",
+      "service": "auth-service"
+    },
+    "success": true,
+    "latency_ms": 4
+  },
+  {
+    "id": "mno77889",
+    "timestamp": "2026-06-10T03:00:08+00:00",
+    "tool": "summarize_incident",
+    "args": {"incident_id": "INC-ABC123"},
+    "success": true,
+    "latency_ms": 1842
+  }
+]

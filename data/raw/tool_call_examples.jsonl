@@ -1,0 +1,38 @@
+[
+  {
+    "scenario": "What is burning right now?",
+    "tools_called": ["query_alerts", "get_slo_status"],
+    "user_query": "What alerts are currently firing and which services are at risk?",
+    "tool_calls": [
+      {
+        "tool": "query_alerts",
+        "args": {"severity": "all"},
+        "result_summary": "3 alerts firing: auth-service critical, api-gateway warning, payment-service warning"
+      },
+      {
+        "tool": "get_slo_status",
+        "args": {"service_name": "auth-service"},
+        "result_summary": "auth-service ELEVATED burn rate 4.61x, budget 90.8% remaining"
+      }
+    ],
+    "llm_synthesis": "auth-service is the highest priority — HighErrorRate alert firing for 47 minutes with 4.61x burn rate. Recommend immediate investigation. api-gateway has a latency warning but is within SLO."
+  },
+  {
+    "scenario": "Incident response workflow",
+    "tools_called": ["get_runbook", "create_incident", "summarize_incident"],
+    "user_query": "Create an incident for the auth-service issue and get me the runbook",
+    "tool_calls": [
+      {
+        "tool": "get_runbook",
+        "args": {"alert_name": "HighErrorRate"},
+        "result_summary": "4 immediate steps including kubectl rollout check and log review"
+      },
+      {
+        "tool": "create_incident",
+        "args": {"title": "auth-service HighErrorRate", "severity": "critical", "service": "auth-service"},
+        "result_summary": "INC-XYZ123 created"
+      }
+    ],
+    "llm_synthesis": "Incident INC-XYZ123 created. Immediate steps: check recent deployments, review pod logs, consider rollback if deployment-related. Escalate to on-call lead if not resolved in 15 minutes."
+  }
+]
